@@ -1,6 +1,6 @@
 # Bundle 1
 
-## Exercise 1
+## #1 Exercise 1
 ```bash
 cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions
 $ git init
@@ -80,7 +80,7 @@ To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
  * [new branch]      dev -> dev
  ```
 
- ## Exercise 2
+ ## #1 Exercise 2
 
 ```bash
 cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (dev)
@@ -224,7 +224,7 @@ $ git reset --hard
 ```
 # Bundle 2
 
-## Exercise 1
+## #2 Exercise 1
 
 ```bash
 cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (dev)
@@ -272,7 +272,7 @@ To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
-## Exercise 2
+## #2 Exercise 2
 ```bash
 
 cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ma$ git checkout main
@@ -415,3 +415,182 @@ To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
    1d7ce17..fc2d241  ft/service-redesign -> ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 ```
+
+# Bundle 3
+## #3 Exercise 1
+```bash
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+$ git status
+On branch ft/team-page
+Untracked files:
+  (use "git add <file>..." to include in what wi
+        team.html
+
+nothing added to commit but untracked files presrack)
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+$ git add team.html 
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+$ git commit -m "add team page file"
+[ft/team-page 7ff5b69] add team page file
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+$ git push -u origin ft/team-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 430 bytes | 430.00 
+Total 3 (delta 1), reused 0 (delta 0), pack-reus
+remote: Resolving deltas: 100% (1/1), completed 
+remote:
+remote:
+To https://github.com/bienvenudev/Gym-Git-Exerci
+ * [new branch]      ft/team-page -> ft/team-pag
+branch 'ft/team-page' set up to track 'origin/ft
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Gitin)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/contact-page)
+$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-p
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+$ git log
+commit 7ff5b69c0f449defca379770707edc6b6b508265 
+origin/ft/team-page)
+Author: bienvenudev <cbienvenu007@gmail.com>
+Date:   Tue Dec 17 12:25:01 2024 +0200
+
+    add team page file
+
+commit 52296935bc8cf31caf2064a2c73c33d0feddef0e contact-page)
+Author: bienvenudev <cbienvenu007@gmail.com>
+Date:   Tue Dec 17 12:10:11 2024 +0200
+
+    add bundle 2 exercise 2
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git/team-page)
+Switched to branch 'ft/contact-page'
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/contact-pse-Solutions (ft/contact-page)                         265
+$ git cherry-pick 7ff5b69c0f449defca379770707edc6b6b508265
+[ft/contact-page fa9c268] add team page file
+ Date: Tue Dec 17 12:25:01 2024 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html                          se-Solutions (ft/contact-p
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git add contact.html 
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m "add contact page"
+[ft/contact-page 03f54dd] add contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push -u origin ft/contact-page 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 698 bytes | 349.00 KiB/s, 
+done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 
+local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on 
+GitHub by visiting:
+remote:      https://github.com/bienvenudev/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-pagebranch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git add faq.html 
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git commit -m "add faq html page"
+[ft/faq-page 5c38bd2] add faq html page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push -u origin ft/faq-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, 
+done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 
+local object.
+remote: 
+ by visiting:                                             by visiting:
+remote:      https://github.com/bienvenudev/Gym-Git-Exercise-Solutions/pull/new/fise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.gitons.git
+ * [new branch]      ft/faq-page -> ft/faq-page          .
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'e'.                                                      -Solutions (ft/faq-page)
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercisese-Solutions (ft/faq-page)
+$ git revert 7ff5b69c0f449defca379770707edc6b6b508265    
+[ft/faq-page 9b3a3b9] Revert "add team page file"      
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercisese-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)       
+
+nothing to commit, working tree clean
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+   5c38bd2..9b3a3b9  ft/faq-page -> ft/faq-page
+   ```
