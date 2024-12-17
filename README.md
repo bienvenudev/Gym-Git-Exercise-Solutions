@@ -594,3 +594,97 @@ Delta compression using up to 4 threads
 To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
    5c38bd2..9b3a3b9  ft/faq-page -> ft/faq-page
    ```
+
+   ## #3 Exercise 2
+   ```bash
+   cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git checkout ft/faq-page 
+Switched to branch 'ft/faq-page'
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)      
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git log --oneline
+775dfa0 (HEAD -> ft/home-page-redesign) Revert "add team page file"
+1137fe9 add faq html page
+8cc1125 add contact page
+d94704f add team page file
+46316d0 (origin/main, origin/HEAD, main) update about page
+36ee114 Merge branch 'main' of https://github.com/bienvenudev/Gym-Git-Exercise-Solutions
+68dcdd7 add bundle 3 exercise 1
+8b6f705 Merge pull request #3 from bienvenudev/ft/service-redesign
+5229693 add bundle 2 exercise 2
+fc2d241 (origin/ft/service-redesign) merge services and main
+32b2198 add new services before redesign
+1d7ce17 add service redesigning
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Your branch and 'origin/ft/home-page-redesign' have diverged,
+and have 10 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)       
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)        
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git add about.html 
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git commit -m 'feat: add homepage redesign on about page'
+[ft/home-page-redesign c517be8] feat: add homepage redesign on about page
+ 1 file changed, 1 insertion(+)
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign 
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        ft/home-page-redesign -> ft/home-page-redesign (non-fast-forward)
+error: failed to push some refs to 'https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.     
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Your branch and 'origin/ft/home-page-redesign' have diverged,
+and have 11 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)       
+
+nothing to commit, working tree clean
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git pull
+Merge made by the 'ort' strategy.
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git push
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.53 KiB | 312.00 KiB/s, done.
+Total 13 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+   9b3a3b9..61262e8  ft/home-page-redesign -> ft/home-page-redesign
+   ```
