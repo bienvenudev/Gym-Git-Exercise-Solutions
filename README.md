@@ -688,3 +688,68 @@ remote: Resolving deltas: 100% (7/7), completed with 1 local object.
 To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
    9b3a3b9..61262e8  ft/home-page-redesign -> ft/home-page-redesign
    ```
+
+   # Bundle 4
+   ## #4 Exercise 1
+   ```bash
+   cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git remote add git-copy https://github.com/bienvenudev/git-exercise-clone.git 
+origin  https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git (fetch)  
+origin  https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git (push)   
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git remote
+git-copy
+origin
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)        
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git add home.html 
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "update homepage"
+[main 9761928] update homepage
+ 1 file changed, 1 insertion(+)
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+   e46b036..9761928  main -> main
+branch 'main' set up to track 'origin/main'.
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git push -u git-copy main
+Enumerating objects: 58, done.
+Counting objects: 100% (58/58), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (58/58), 12.92 KiB | 1.17 MiB/s, done.
+Total 58 (delta 27), reused 51 (delta 24), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (27/27), done.
+To https://github.com/bienvenudev/git-exercise-clone.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'git-copy/main'.
+```
