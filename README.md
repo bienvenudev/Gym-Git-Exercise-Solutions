@@ -272,3 +272,146 @@ To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+## Exercise 2
+```bash
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ma$ git checkout main
+Your branch is up to date with 'origin/main'.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ma$ git pull
+Already up to date.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ma$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ftrvice-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ftrvice-redesign)
+$ git add services.html 
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ftrvice-redesign)
+$ git commit -m "add service redesigning"
+[ft/service-redesign 1d7ce17] add service redesigning
+ 1 file changed, 1 insertion(+)
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ftrvice-redesign)
+$ git push -u origin ft/service-redesign 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+esign' on GitHub by visiting:
+remote:      https://github.com/bienvenudev/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git       
+ * [new branch]      ft/service-redesign -> ft/service-redesign        
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+es in working directory)        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")      
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (main)
+$ git add services.html
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "add new services before redesign"
+[main 32b2198] add new services before redesign
+ 1 file changed, 1 insertion(+)
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.  
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git       
+   dd66c5e..32b2198  main -> main
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (main)
+$ git checkout ft/service-redesign 
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git diff main ft/
+ft/bundle-2           ft/service-redesign   
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git diff main ft/service-redesign 
+diff --git a/services.html b/services.html
+index 16c0310..e24a9bf 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,6 @@
+   </head>
+   <body>
+     <h1>Our Services</h1>
+-    <p>New Services Before Redesigning</p>
++    <p>Service Redesigning</p>
+   </body>
+ </html>
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git add services.html 
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git commit -m "merge services and main"
+[ft/service-redesign fc2d241] merge services and main
+
+cbien@HP-321 MINGW64 ~/Documents/The-Gym/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push -u origin ft/service-redesign 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+   1d7ce17..fc2d241  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+```
