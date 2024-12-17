@@ -753,3 +753,116 @@ To https://github.com/bienvenudev/git-exercise-clone.git
  * [new branch]      main -> main
 branch 'main' set up to track 'git-copy/main'.
 ```
+
+## #4 Exercise 2
+```bash
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)   
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/footer)        
+$ git add footer.html 
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/footer)        
+$ git commit -m "feat: add footer file"
+[ft/footer 9f1f957] feat: add footer file
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/footer)        
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 432 bytes | 432.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 
+local object.
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solu
+tions.git
+   396379a..9f1f957  ft/footer -> ft/footer
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solut
+ions (ft/footer)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solut
+ions (ft/squashing)
+$ git merge --squash ft/footer 
+Updating bdb8645..9f1f957
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html   | 11 +++++++++++
+ services.html |  2 ++
+ 2 files changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solut
+ions (ft/squashing)
+$ git log
+commit bdb86451f4bf7fbcf3c6b997dffc8b4018f882e3 (HEAD -
+> ft/squashing, git-copy/main, main)
+Author: bienvenudev <cbienvenu007@gmail.com>
+Date:   Tue Dec 17 22:40:22 2024 +0200
+
+    add bundle 4 exercise 1
+
+commit 97619281116a6d98518401cad5be648fdafce7f7 (origin/main, origin/HEAD)     
+Author: bienvenudev <cbienvenu007@gmail.com>
+Date:   Tue Dec 17 22:32:12 2024 +0200
+
+    update homepage
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)     
+$ git status
+On branch ft/squashing  
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+        modified:   services.html
+
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)     
+$ git commit -m "footer changes squashing"
+[ft/squashing 49edf20] footer changes squashing
+ 2 files changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)     
+$ git log
+commit 49edf20930f6f3e1b3d7883920707b4a9545a27c (HEAD -> ft/squashing)
+Author: bienvenudev <cbienvenu007@gmail.com>
+Date:   Tue Dec 17 22:52:13 2024 +0200
+
+    footer changes squashing
+
+commit bdb86451f4bf7fbcf3c6b997dffc8b4018f882e3 (git-copy/main, main)
+Author: bienvenudev <cbienvenu007@gmail.com>
+Date:   Tue Dec 17 22:40:22 2024 +0200
+
+    add bundle 4 exercise 1
+
+commit 97619281116a6d98518401cad5be648fdafce7f7 (origin/main, origin/HEAD)     
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)     
+$ git push -u origin ft/squashing 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 565 bytes | 565.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:        
+remote:      https://github.com/bienvenudev/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)  
+```
