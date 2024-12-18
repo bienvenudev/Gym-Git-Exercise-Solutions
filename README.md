@@ -968,3 +968,137 @@ To https://github.com/bienvenudev/git-cafe-exercise.git
    d1d3f9c..422f5bc  main -> main
 branch 'main' set up to track 'origin/main'.
 ```
+# Bundle 6
+## #6 Exercise 1
+```bash
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+
+$ git checkout -b ft/menu
+Switched to a new branch 'ft/menu'
+                                                         nu)
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git status
+On branch ft/menu
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        menu.html
+
+nothing added to commit but untracked files present (use 
+"git add" to track)
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git add menu.html 
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git commit -m "feat: add menu page"
+[ft/menu 12dc05b] feat: add menu page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git push -u origin ft/menu 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 434 bytes | 144.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu' on GitHub by visiting:
+remote:      https://github.com/bienvenudev/git-cafe-exercise/pull/new/ft/menu   
+remote:
+To https://github.com/bienvenudev/git-cafe-exercise.git
+ * [new branch]      ft/menu -> ft/menu
+branch 'ft/menu' set up to track 'origin/ft/menu'.
+```
+## #6 Exercise 2
+```bash
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git checkout -b ft/bug-fix
+Switched to a new branch 'ft/bug-fix'
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/bug-fix)
+$ git status
+On branch ft/bug-fix
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)        
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index-4.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/bug-fix)
+$ git add .
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/bug-fix)
+$ git commit -m "feat: rename index-4 to contact"
+[ft/bug-fix 7b11236] feat: rename index-4 to contact
+ 1 file changed, 203 insertions(+), 203 deletions(-)
+ rename index-4.html => contact.html (98%)
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/bug-fix)
+$ git push -u origin ft/bug-fix 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.50 KiB | 2.50 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bug-fix' on GitHub by visiting:
+remote:      https://github.com/bienvenudev/git-cafe-exercise/pull/new/ft/bug-fix
+remote:
+To https://github.com/bienvenudev/git-cafe-exercise.git
+ * [new branch]      ft/bug-fix -> ft/bug-fix
+branch 'ft/bug-fix' set up to track 'origin/ft/bug-fix'.
+```
+## #6 Exercise 3
+```bash
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (ft/bug-fix)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")      
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git add index-4.html 
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git commit -m "feat: fix the telephone number"
+[main 69c4664] feat: fix the telephone number
+ 1 file changed, 231 insertions(+), 163 deletions(-)
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.41 KiB | 720.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/bienvenudev/git-cafe-exercise.git
+   422f5bc..69c4664  main -> main
+branch 'main' set up to track 'origin/main'.
+```
