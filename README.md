@@ -866,3 +866,105 @@ branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 
 cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)  
 ```
+
+# Bundle 5
+
+## #5 Exercise 1
+```bash
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'git-copy/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)        
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)       
+        index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git commit -m 'feat: rename home to index'
+[main 62754af] feat: rename home to index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 238 bytes | 47.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bienvenudev/git-exercise-clone.git
+   01f63a7..62754af  main -> main
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git remote
+git-copy
+origin
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git remote -v
+git-copy        https://github.com/bienvenudev/git-exercise-clone.git (fetch)
+git-copy        https://github.com/bienvenudev/git-exercise-clone.git (push)
+origin  https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git (push)
+
+cbien@HP-321 MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.31 KiB | 446.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/bienvenudev/Gym-Git-Exercise-Solutions.git
+   9761928..62754af  main -> main
+```
+## #5 Exercise 2
+```bash
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")      
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git add index.html
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git commit -m "feat: change our place to restaurant"
+[main 422f5bc] feat: change our place to restaurant
+ 1 file changed, 399 insertions(+), 239 deletions(-)
+
+cbien@HP-321 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.56 KiB | 799.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/bienvenudev/git-cafe-exercise.git
+   d1d3f9c..422f5bc  main -> main
+branch 'main' set up to track 'origin/main'.
+```
